@@ -1,6 +1,6 @@
 Welcome to Project Kind Way 
 
-This is my personal project that I'd hope with this application people can have a better self-development by doing at least 1 kindness a day. 
+This is my personal project. I hope with this app that people can have a better self-development by doing at least 1 act of kindness each day. 
 
 #User Stories 
 
