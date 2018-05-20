@@ -4,6 +4,9 @@ exports.up = function(knex, Promise) {
         table.increments('user_id')
         table.string('user_name')
         table.string('user_email')
+        table.string('Country')
+        table.string('City')
+        table.string('Region')
         table.string('hash')
     })
 };
