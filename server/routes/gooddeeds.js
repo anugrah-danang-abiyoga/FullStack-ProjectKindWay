@@ -41,7 +41,7 @@ router.get('/:id', (req, res) => {
 })
 
 router.delete('/:id', (req, res) => {
-    db.deleteGooddeedById(req.params.id, req.app.get(db))
+    db.deleteGooddeedById(req.params.id, req.app.get('db'))
     .then(gooddeed => res.json(gooddeed))
     .catch(err => res.status(500).send({message: "Server Error"}))
 })
