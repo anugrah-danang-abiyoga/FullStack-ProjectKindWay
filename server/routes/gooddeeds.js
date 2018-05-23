@@ -18,30 +18,4 @@ router.post('/', decode, (req, res) => {
     .catch(err => res.status(500).send({message: "Server Error"}))
 })
 
-router.get('/', decode, (req, res) => {
-    db.getGooddeedsByUserId(req.user.user_id, req.app.get('db'))
-    .then(gooddeeds => res.json(gooddeeds))
-    .catch(err => res.status(500).send({message: "Server Error"}))
-})
-
-
-router.get('/:id', (req, res) => {
-    db.getGooddeedById(req.params.id, req.app.get('db'))
-    .then(gooddeed => {
-        let gooddeed_to_send = {
-            'id': gooddeed[0].id,
-            'user_id':gooddeed[0].user_id,
-            'date': gooddeed[0].date,
-            'gooddeeds': JSON.parse(gooddeed.gooddeeds)
-        }
-        return res.json([gooddeed_to_send])})
-        .catch(err => {console.log('catch', err)
-    res.status(500).send({message: "Server Error"})
-    })
-})
-
-router.delete('/:id', (req, res) => {
-    db.deleteGooddeedById(req.params.id, req.app.get('db'))
-    .then(gooddeed => res.json(gooddeed))
-    .catch(err => res.status(500).send({message: "Server Error"}))
-})
+module.exports = router
