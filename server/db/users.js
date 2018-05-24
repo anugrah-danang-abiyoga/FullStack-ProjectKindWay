@@ -5,7 +5,7 @@ function createUser (user_name, password, user_city, user_country, user_region, 
     hash.generate(password, (err, hash) => {
       if (err) reject(err)
       db('users')
-        .insert({user_name: user_name.toLowerCase(), hash})
+        .insert({user_name: user_name.toLowerCase(), user_city, user_country, user_region, hash})
         .then(user_id => resolve(user_id))
     })
 
