@@ -6,11 +6,10 @@ exports.seed = function(knex, Promise) {
       // Inserts seed entries
       return knex('users').insert([
         {user_id: 55, 
-          user_name: 'test', 
-          user_email:'test@user.com', 
-          Country:'',
-          City:'',
-          Region:'',
+          user_name: 'test',  
+          user_country:'New Zealand',
+          user_city:'Lower Hutt',
+          user_region:'Wellington',
           hash:'$2b$12$W8Odil.jesWW9kfvamaw6OGbF6qHV8u782PvvfFxDZcejCePQykc2'}
       ]);
     });
