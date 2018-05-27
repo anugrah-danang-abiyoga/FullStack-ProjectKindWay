@@ -3,11 +3,13 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {logoutUser} from '../actions/logout'
 
+import GoodList from './GoodList'
+
 function Nav (props) {
   return (
     <div className="Nav hero is-small is-info">
       <div className="hero-body">
-        <Link to="/">Home</Link>
+        <Link to="/GoodList">Home</Link>
         {props.auth.isAuthenticated
           ? <button onClick={() => props.dispatch(logoutUser())}>Logout</button>
           : <div className="columns nav-menu">

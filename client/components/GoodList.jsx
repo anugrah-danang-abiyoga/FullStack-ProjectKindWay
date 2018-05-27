@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {addGoodDeed, editGoodDeed, deleteGoodDeed} from '../actions/gooddeed'
+import { editGoodDeed, deleteGoodDeed } from '../actions/gooddeed'
 
 class GoodList extends React.Component {
     constructor(props) {
