@@ -1,4 +1,4 @@
-import request from '..utils/api'
+import request from '../utils/api'
 
 export function saveGoodDeed (date, gooddeeds) {
 
