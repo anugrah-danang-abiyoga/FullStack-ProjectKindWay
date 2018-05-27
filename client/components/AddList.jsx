@@ -28,5 +28,18 @@ export class AddList extends React.Component {
 
     render() {
         return
+        <div className="columns is-centered">
+					{/* Input field for shopping item */}
+				<div className="level columns">
+					<div className="control column is-4">
+						<input onChange={this.handleChange} className="input is-normal has-text-centered" type="text" value={this.state.name} name="name" placeholder="Enter item" />
+						{/* <label className="label ">Item:</label> */}
+					</div>
+					<a className="button column is-4 is-normal is-dark is-outlined is-mobile" onClick={this.addItem} type="submit" value="add item">
+						Add
+					</a>
+					<br/>
+				</div>
+			</div>
     }
 }
