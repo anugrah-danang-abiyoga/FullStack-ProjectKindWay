@@ -6,11 +6,14 @@ class GoodList extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
+            id: 0,
             act: '',
             showInputField: false
         }
-        this.act = this.act.bind(this)
-        this.showInputField = this.showInputField.bind(this)
+        // this.act = this.act.bind(this)
+        this.handleChange = this.handleChange.bind(this)
+        this.editDeed = this.editDeed.bind(this)
+        // this.showInputField = this.showInputField.bind(this)
     }
     toggleForm() {
         this.setState({showInputField: !this.state.showInputField})
@@ -18,7 +21,7 @@ class GoodList extends React.Component {
     handleChange(e) {
         this.setState({[e.target.deed]: e.target.value})
     }
-    editDeed(e, deed) {
+    editDeed(e) {
         e.preventDefault() 
 
         let updateDeed = {

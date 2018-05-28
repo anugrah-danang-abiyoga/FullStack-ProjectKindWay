@@ -15,6 +15,7 @@ function Nav (props) {
           ? <div>
           <button onClick={() => props.dispatch(logoutUser())}>Logout</button>
           <AddList />
+          {/* <GoodList /> */}
           </div> 
           : <div className="columns nav-menu">
             <Link className="nav-item" to="/login">Login</Link>&nbsp;
