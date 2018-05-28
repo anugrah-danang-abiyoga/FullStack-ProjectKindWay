@@ -11,7 +11,8 @@ export class AddList extends React.Component {
             id: 0,
             act: ''
         }
-        
+        this.handleChange = this.handleChange.bind(this)
+        this.addDeed = this.addDeed.bind(this)
     }
     handleChange(e) {
         this.setState({[e.target.act]: e.target.value})
@@ -27,12 +28,12 @@ export class AddList extends React.Component {
     }
 
     render() {
-        return
+        return (
         <div className="columns is-centered">
 					{/* Input field for shopping item */}
 				<div className="level columns">
 					<div className="control column is-4">
-						<input onChange={this.handleChange} className="input is-normal has-text-centered" type="text" value={this.state.name} name="name" placeholder="Enter item" />
+						<input onChange={this.handleChange} className="input is-normal has-text-centered" type="text" value={this.state.name} name="name" placeholder="Enter act" />
 						{/* <label className="label ">Item:</label> */}
 					</div>
 					<a className="button column is-4 is-normal is-dark is-outlined is-mobile" onClick={this.addItem} type="submit" value="add item">
@@ -41,5 +42,17 @@ export class AddList extends React.Component {
 					<br/>
 				</div>
 			</div>
+        )
+    }
+
+}
+
+
+const mapStateToProps = (state) => {
+
+    return {
+        gooddeed: state.gooddeed
     }
 }
+
+export default connect(mapStateToProps)(AddList)
