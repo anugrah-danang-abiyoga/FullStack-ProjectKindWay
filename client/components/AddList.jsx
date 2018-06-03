@@ -39,7 +39,7 @@ export class AddList extends React.Component {
                     </div>
 				<div className="level columns">
 					<div className="control column is-4">
-						<input onChange={this.handleChange} className="input is-normal has-text-centered" type="text" value={this.state.act} name="name" placeholder="Enter act" />
+						<input onChange={this.handleChange} className="input is-normal has-text-centered" type="text" value={this.state.act} name="act" placeholder="Enter act" />
 					</div>
 					<a className="button column is-4 is-normal is-dark is-outlined is-mobile" onClick={this.addDeed} type="submit" value="add item">
 						Add

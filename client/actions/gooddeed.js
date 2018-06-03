@@ -1,16 +1,16 @@
 import request from '../utils/api'
 import gooddeed from '../reducers/gooddeed'
 
-// export function saveGoodDeed (date, gooddeeds) {
+export function saveGoodDeed (date, gooddeeds) {
 
-//     return (dispatch) => {
-//         let data = {
-//             date, gooddeeds
-//         }
+    return (dispatch) => {
+        let data = {
+            date, gooddeeds
+        }
 
-//         request('post', 'v1/gooddeeds', data)
-//     }
-// }
+        request('post', 'v1/gooddeeds', data)
+    }
+}
 
 export function addGoodDeed (deed) {
     return {
