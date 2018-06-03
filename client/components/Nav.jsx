@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {logoutUser} from '../actions/logout'
 
-import GoodList from './GoodList'
+// import GoodList from './GoodList'
 import AddList from './AddList'
 
 function Nav (props) {

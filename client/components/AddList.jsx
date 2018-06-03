@@ -22,19 +22,24 @@ export class AddList extends React.Component {
         e.preventDefault()
 
         let deed = {
-            id: id.state.id++,
+            id: this.state.id++,
             act: this.state.act
         }
+        this.props.dispatch(addGoodDeed(deed))
+        this.setState({
+            act: ''
+        })
     }
 
     render() {
         return (
         <div className="columns is-centered">
-					{/* Input field for shopping item */}
+					<div> 
+                        <GoodList />
+                    </div>
 				<div className="level columns">
 					<div className="control column is-4">
-						<input onChange={this.handleChange} className="input is-normal has-text-centered" type="text" value={this.state.name} name="name" placeholder="Enter act" />
-						{/* <label className="label ">Item:</label> */}
+						<input onChange={this.handleChange} className="input is-normal has-text-centered" type="text" value={this.state.act} name="name" placeholder="Enter act" />
 					</div>
 					<a className="button column is-4 is-normal is-dark is-outlined is-mobile" onClick={this.addDeed} type="submit" value="add item">
 						Add

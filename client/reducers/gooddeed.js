@@ -21,3 +21,5 @@ function gooddeed (state = [], action) {
             return state
     }
 }
+
+export default gooddeed
