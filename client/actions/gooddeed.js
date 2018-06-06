@@ -1,4 +1,5 @@
 import request from '../utils/api'
+import gooddeed from '../reducers/gooddeed'
 
 export function saveGoodDeed (date, gooddeeds) {
 

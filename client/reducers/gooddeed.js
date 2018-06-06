@@ -1,3 +1,7 @@
+// const initialDeedState = {
+//     deeds: []
+// }
+
 function gooddeed (state = [], action) {
     switch (action.type) {
         case 'ADD_DEED':
@@ -13,7 +17,7 @@ function gooddeed (state = [], action) {
             return [...editDeedState]
         case 'DELETE_DEED': 
             let deleteDeedState = state.filter(deed => {
-                return deed.id !== action.deed.id
+                return deed.id !== action.deed_id
             })
             return [...deleteDeedState]
         
@@ -21,3 +25,5 @@ function gooddeed (state = [], action) {
             return state
     }
 }
+
+export default gooddeed
