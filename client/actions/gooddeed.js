@@ -12,10 +12,10 @@ export function saveGoodDeed (date, gooddeeds) {
     }
 }
 
-export function addGoodDeed (deed) {
+export function addGoodDeed (id) {
     return {
         type: 'ADD_DEED',
-        deed
+        id
     }
 }
 
