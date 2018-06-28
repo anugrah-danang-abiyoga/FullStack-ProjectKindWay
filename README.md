@@ -1,4 +1,4 @@
-# FullStack Project Kind Way
+# Full-Stack Project Kind Way
 Welcome to Project Kind Way 
 
 This is my personal project. I hope with this app that people can have a better self-development by doing at least 1 act of kindness each day. 
