@@ -15,5 +15,5 @@ MVP
 - [ ] As a user I want to to be able delete my good deeds
 
 Stretch 
-- [x] As a user I want to be able to see Loading page before I login 
-- [x] As a user I want to be able to see all my previous good deeds.
+- [ ] As a user I want to be able to see Loading page before I login 
+- [ ] As a user I want to be able to see all my previous good deeds.
